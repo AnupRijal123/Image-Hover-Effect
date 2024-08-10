@@ -3,7 +3,7 @@ body {
 }
 
 .main-container {
-    background-color: red;
+    background-color: #3a3b3c;
     width: 100vw;
     height: 100vh;
     position: relative;
@@ -11,22 +11,16 @@ body {
 }
 
 .card {
-    background-color: yellow;
     width: fit-content;
     position: absolute;
+    height: 400px;
+    transition: all 1s ease;
 }
 
-
-
-.title-text {
-    color: pink;
-    margin: 0;
-    text-align: center;
-}
 
 .character-image {
-    background-color: blue;
-    height: 400px;
+    height: 100%;
+    cursor: pointer;
 }
 
 .card:nth-child(1) {
@@ -36,8 +30,8 @@ body {
 }
 
 .card:nth-child(2) {
-    top: 20%;
-    left: 10%;
+    top: 25%;
+    left: 13%;
     z-index: 9;
 
 }
@@ -59,11 +53,31 @@ body {
 
 .card:nth-child(5) {
     top: 10%;
-    right: 2%;
+    right: 1%;
     z-index: 8;
 
 }
 
-.card:nth-child(3) .character-image {
+.card:nth-child(3) {
     height: 600px;
+}
+
+
+.card:not(:hover) {
+    filter: grayscale(1) blur(2px);
+}
+
+.text-div {
+    position: absolute;
+    bottom: 2%;
+    right: 10%;
+}
+
+.text-div h3 {
+    color: #01ffff;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+
 }
